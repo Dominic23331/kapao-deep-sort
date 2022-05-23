@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1fc873a7-5ecc-44f3-9d06-d1875a36601a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/deep_sort/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/configs/deep_sort.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/deep/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/deep/checkpoint/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/deep/checkpoint/mobilenetv2_x1_0_market1501.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/deep/reid_model_factory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/deep_sort.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/sort/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/sort/detection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/sort/iou_matching.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/sort/kalman_filter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/sort/linear_assignment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/sort/nn_matching.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/sort/preprocessing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/sort/track.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/sort/tracker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/utils/asserts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/utils/draw.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/utils/evaluation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/utils/io.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/utils/json_logger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/utils/log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/utils/parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep_sort/utils/tools.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/Arial.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/demos/image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/demos/squash.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/demos/video.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/export.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/models/common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/models/experimental.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/models/yolo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/models/yolov5l6.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/models/yolov5m6.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/models/yolov5s6.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/pytube" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/res/2016-01-04_21-33-35_Depth_kapao_s_coco_gpu.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/res/2DiQUX11YaY_720p_kapao_s_coco_gpu.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/res/kapao_inference.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/res/nrchfeybHmw_480p_kapao_l_coco_gpu.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/res/squash_inference_kapao_s_coco.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/res/yBZ0Y2t0ceo_480p_kapao_s_coco_cpu.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/activations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/augmentations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/autoanchor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/callbacks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/datasets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/downloads.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/general.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/labels.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/loggers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/loggers/wandb/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/loggers/wandb/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/loggers/wandb/log_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/loggers/wandb/sweep.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/loggers/wandb/sweep.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/loggers/wandb/wandb_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/loss.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/metrics.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/plots.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/utils/torch_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kapao/val.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="29XxfZtsIuAMzKSjthvqByO55zF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\program\PycharmProject\kapao-deep-sort" />
+      <recent name="D:\program\PycharmProject\kapao-deep-sort\deep_sort\deep\checkpoint" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\program\PycharmProject\kapao-deep-sort" />
+      <recent name="D:\program\PycharmProject\kapao-deep-sort\deep_sort" />
+      <recent name="D:\program\PycharmProject\kapao-deep-sort\deep_sort\deep\checkpoint" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kapao-deep-sort" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1fc873a7-5ecc-44f3-9d06-d1875a36601a" name="Changes" comment="" />
+      <created>1653273336017</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653273336017</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
