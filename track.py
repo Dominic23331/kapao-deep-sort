@@ -1,5 +1,8 @@
 # limit the number of cpus used by high performance libraries
 import os
+
+import numpy as np
+
 os.environ["OMP_NUM_THREADS"] = "1"
 os.environ["OPENBLAS_NUM_THREADS"] = "1"
 os.environ["MKL_NUM_THREADS"] = "1"
@@ -134,7 +137,9 @@ def detect(opt):
                 xywhs = xyxy2xywh(det[:, 0:4])
                 confs = det[:, 4]
                 clss = det[:, 5]
-                outputs = deepsort.update(xywhs.cpu(), confs.cpu(), clss.cpu(), im0)      # [[x1, y1, x2, y2, id, class, prob]]
+                out = deepsort.update(xywhs.cpu(), confs.cpu(), clss.cpu(), im0, poses)      # [[x1, y1, x2, y2, id, class, prob]]
+        outputs, poses = out
+
         t5 = time_sync() * 1000
         dt[3] = t5 - t4
 

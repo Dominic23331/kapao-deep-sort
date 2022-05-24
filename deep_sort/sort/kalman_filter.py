@@ -69,7 +69,7 @@ class KalmanFilter(object):
             to 0 mean.
 
         """
-        mean_pos = measurement
+        mean_pos = measurement[:4]
         mean_vel = np.zeros_like(mean_pos)
         mean = np.r_[mean_pos, mean_vel]
 

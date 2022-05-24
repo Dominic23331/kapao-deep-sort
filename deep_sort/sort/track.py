@@ -64,11 +64,12 @@ class Track:
     """
 
     def __init__(self, mean, covariance, track_id, class_id, conf, n_init, max_age,
-                 feature=None):
+                 feature=None, pose=None):
         self.mean = mean
         self.covariance = covariance
         self.track_id = track_id
         self.class_id = int(class_id)
+        self.pose = pose
         self.hits = 1
         self.age = 1
         self.time_since_update = 0
@@ -129,7 +130,7 @@ class Track:
         self.mean, self.covariance = kf.predict(self.mean, self.covariance)
         self.increment_age()
 
-    def update(self, kf, detection, class_id, conf):
+    def update(self, kf, detection, class_id, conf, pose=None):
         """Perform Kalman filter measurement update step and update the feature
         cache.
 
@@ -146,6 +147,7 @@ class Track:
             self.mean, self.covariance, detection.to_xyah())
         self.features.append(detection.feature)
         self.class_id = class_id.int()
+        self.pose = pose
 
         self.hits += 1
         self.time_since_update = 0

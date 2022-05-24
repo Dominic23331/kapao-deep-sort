@@ -1,78 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fc873a7-5ecc-44f3-9d06-d1875a36601a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/deep_sort/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/configs/deep_sort.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/deep/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/deep/checkpoint/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/deep/checkpoint/mobilenetv2_x1_0_market1501.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/deep/reid_model_factory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/deep_sort.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/sort/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/sort/detection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/sort/iou_matching.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/sort/kalman_filter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/sort/linear_assignment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/sort/nn_matching.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/sort/preprocessing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/sort/track.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/sort/tracker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/utils/asserts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/utils/draw.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/utils/evaluation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/utils/io.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/utils/json_logger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/utils/log.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/utils/parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_sort/utils/tools.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/Arial.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/demos/image.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/demos/squash.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/demos/video.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/export.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/models/common.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/models/experimental.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/models/yolo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/models/yolov5l6.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/models/yolov5m6.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/models/yolov5s6.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/pytube" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/res/2016-01-04_21-33-35_Depth_kapao_s_coco_gpu.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/res/2DiQUX11YaY_720p_kapao_s_coco_gpu.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/res/kapao_inference.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/res/nrchfeybHmw_480p_kapao_l_coco_gpu.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/res/squash_inference_kapao_s_coco.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/res/yBZ0Y2t0ceo_480p_kapao_s_coco_cpu.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/activations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/augmentations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/autoanchor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/callbacks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/datasets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/downloads.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/general.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/labels.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/loggers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/loggers/wandb/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/loggers/wandb/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/loggers/wandb/log_dataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/loggers/wandb/sweep.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/loggers/wandb/sweep.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/loggers/wandb/wandb_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/loss.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/metrics.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/plots.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/utils/torch_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kapao/val.py" afterDir="false" />
+    <list default="true" id="1fc873a7-5ecc-44f3-9d06-d1875a36601a" name="Changes" comment="可以使用了">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deep_sort/deep_sort.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep_sort/deep_sort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deep_sort/sort/detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep_sort/sort/detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deep_sort/sort/kalman_filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep_sort/sort/kalman_filter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deep_sort/sort/track.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep_sort/sort/track.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deep_sort/sort/tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep_sort/sort/tracker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/track.py" beforeDir="false" afterPath="$PROJECT_DIR$/track.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -148,6 +86,14 @@
       <option name="presentableId" value="Default" />
       <updated>1653273336017</updated>
     </task>
+    <task id="LOCAL-00001" summary="可以使用了">
+      <created>1653296446254</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653296446254</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,5 +106,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/yolov5" />
+    </ignored-roots>
+    <MESSAGE value="可以使用了" />
+    <option name="LAST_COMMIT_MESSAGE" value="可以使用了" />
   </component>
 </project>
