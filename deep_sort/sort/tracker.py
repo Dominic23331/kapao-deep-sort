@@ -46,6 +46,9 @@ class Tracker:
         self.tracks = []
         self._next_id = 1
 
+    def get_next_id(self):
+        return self._next_id
+
     def predict(self):
         """Propagate track state distributions one time step forward.
 

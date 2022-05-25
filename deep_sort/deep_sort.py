@@ -86,7 +86,7 @@ class DeepSort(object):
             outbbox.append(np.array([x1, y1, x2, y2, track_id, class_id, conf]))
         if len(outbbox) > 0:
             outbbox = np.stack(outbbox, axis=0)
-        return (outbbox, outpose)
+        return outbbox, outpose
 
     """
     TODO:
@@ -147,3 +147,6 @@ class DeepSort(object):
         else:
             features = np.array([])
         return features
+
+    def get_next_id(self):
+        return self.tracker.get_next_id()

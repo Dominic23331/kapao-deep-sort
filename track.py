@@ -1,8 +1,6 @@
 # limit the number of cpus used by high performance libraries
 import os
 
-import numpy as np
-
 os.environ["OMP_NUM_THREADS"] = "1"
 os.environ["OPENBLAS_NUM_THREADS"] = "1"
 os.environ["MKL_NUM_THREADS"] = "1"
@@ -15,8 +13,6 @@ sys.path.insert(0, './kapao')
 import yaml
 
 import cv2
-from pytube import YouTube
-import gdown
 import torch
 import torch.backends.cudnn as cudnn
 
@@ -28,13 +24,6 @@ from kapao.val import run_nms, post_process_batch
 from deep_sort.utils.parser import get_config
 from deep_sort.deep_sort import DeepSort
 
-
-TAG_RES = {135: '480p', 136: '720p', 137: '1080p'}
-DEMO_BACKUP = {
-    'yBZ0Y2t0ceo': ['1XqaKI8-hjmbz97UX9bI6lKxTYj73ztmf', 'yBZ0Y2t0ceo_480p.mp4'],
-    '2DiQUX11YaY': ['1E1azSUE5KXHvCCuFvvM6yUjQDmP3EuSx', '2DiQUX11YaY_720p.mp4'],
-    'nrchfeybHmw': ['1Q8awNjA6W4gePbWE5cSAu83CwjiwD0_w', 'nrchfeybHmw_480p.mp4']
-}
 
 def detect(opt):
     # Initialize
@@ -54,26 +43,6 @@ def detect(opt):
     data['count_fused'] = False
 
     video_path = opt.source
-    if not video_path:
-        video_path = opt.yt_id + '_' + TAG_RES[opt.tag] + '.mp4'
-        url = 'https://www.youtube.com/watch?v={}'.format(opt.yt_id)
-
-        if not os.path.isfile(video_path):
-            try:
-                yt = YouTube(url)
-                # [print(s) for s in yt.streams]
-                stream = [s for s in yt.streams if s.itag == opt.tag][0]
-                print('Downloading demo video...')
-                stream.download(filename=video_path)
-                print('Done.')
-            except Exception as e:
-                print('Pytube error: {}'.format(e))
-                print('We are working on a patch for pytube...')
-                if video_path == DEMO_BACKUP[opt.yt_id][1]:
-                    print('Fetching backup demo video from google drive')
-                    gdown.download("https://drive.google.com/uc?id={}".format(DEMO_BACKUP[opt.yt_id][0]))
-                else:
-                    sys.exit()
 
     cudnn.benchmark = True
     device = select_device(opt.device, batch_size=1)
@@ -96,6 +65,21 @@ def detect(opt):
     if device.type != 'cpu':
         model(torch.zeros(1, 3, imgsz, imgsz).to(device).type_as(next(model.parameters())))  # run once
 
+    if opt.output != '':
+        fileType = os.path.splitext(opt.output)[-1]
+        if fileType == ".avi":
+            forcc = cv2.VideoWriter_fourcc(*'XVID')
+        elif fileType == ".mp4":
+            forcc = cv2.VideoWriter_fourcc(*'MP4V')
+        else:
+            raise ValueError("Please insert right type!")
+
+        if video_path == "0":
+            h, w, _ = dataset.imgs[0].shape
+        else:
+            h, w = int(dataset.cap.get(cv2.CAP_PROP_FRAME_HEIGHT)), int(dataset.cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+        writer = cv2.VideoWriter(opt.output, forcc, 30.0, (w, h))
+
     print("Initialize deepsort...")
     # initialize deepsort
     cfg = get_config()
@@ -108,7 +92,6 @@ def detect(opt):
         max_iou_distance=cfg.DEEPSORT.MAX_IOU_DISTANCE,
         max_age=cfg.DEEPSORT.MAX_AGE, n_init=cfg.DEEPSORT.N_INIT, nn_budget=cfg.DEEPSORT.NN_BUDGET,
     )
-    outputs = None
 
     dt = [0.] * 4
     for i, (path, img, im0, _) in enumerate(dataset):
@@ -158,8 +141,16 @@ def detect(opt):
                 cv2.line(im0_copy, pt1, pt2, opt.color, opt.line_thick)
 
         cv2.imshow('', im0_copy)
-        cv2.waitKey(1)
+        if opt.output != '':
+            writer.write(im0_copy)
+
+        if cv2.waitKey(1) & 0xff == ord("q"):
+            break
+
     cv2.destroyAllWindows()
+
+    if opt.output != '':
+        writer.release()
 
 
 if __name__ == '__main__':
@@ -167,11 +158,8 @@ if __name__ == '__main__':
     parser.add_argument('--kapao_model', nargs='+', type=str, default='kapao/weights/kapao_s_coco.pt', help='model.pt path(s)')
     parser.add_argument('--deep_sort_model', default='mobilenetv2_x1_0_market1501', type=str)
     parser.add_argument('--source', type=str, default='0', help='source')  # file/folder, 0 for webcam
-    parser.add_argument('--output', type=str, default='inference/output', help='output folder')  # output folder
+    parser.add_argument('--output', default='', type=str, help='output video')  # output video
     parser.add_argument('--device', default='', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
-    parser.add_argument('--save-vid', action='store_true', help='save video tracking results')
-    parser.add_argument('--tag', type=int, default=135, help='stream tag, 137=1080p, 136=720p, 135=480p')
-    parser.add_argument('--yt-id', default='yBZ0Y2t0ceo', help='youtube url id')
 
     parser.add_argument('--imgsz', type=int, default=1024, help='inference size h,w')
     parser.add_argument('--conf-thres', type=float, default=0.5, help='confidence threshold')
@@ -189,11 +177,11 @@ if __name__ == '__main__':
     parser.add_argument('--kp-thick', type=int, default=2, help='keypoint circle thickness')
     parser.add_argument('--line-thick', type=int, default=3, help='line thickness')
 
-    parser.add_argument('--update', action='store_true', help='update all models')
     parser.add_argument("--config_deepsort", type=str, default="deep_sort/configs/deep_sort.yaml")
     parser.add_argument("--config_kapao", type=str, default="kapao/data/coco-kp.yaml")
     parser.add_argument("--half", action="store_true", help="use FP16 half-precision inference")
     opt = parser.parse_args()
 
+    print(opt.output)
     with torch.no_grad():
         detect(opt)
