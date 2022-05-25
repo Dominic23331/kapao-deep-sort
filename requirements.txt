@@ -1,38 +1,25 @@
-# pip install -r requirements.txt
-
-# base ----------------------------------------
-
-matplotlib>=3.2.2
-numpy>=1.18.5
-opencv-python>=4.1.2
-Pillow>=7.1.2
-PyYAML>=5.3.1
-requests>=2.23.0
-scipy>=1.4.1
-torch>=1.7.0
-torchvision>=0.8.1
-tqdm>=4.41.0
-
-# plotting ------------------------------------
-
-pandas>=1.1.4
-seaborn>=0.11.0
-
-# deep_sort -----------------------------------
-
-easydict
-
-# torchreid
-
-Cython
-h5py
-six
-tb-nightly
-future
-yacs
-gdown
-flake8
-yapf
-isort==4.3.21
-imageio
-pytube
+albumentations==1.1.0
+easydict==1.9
+gdown==4.4.0
+imageio==2.17.0
+ipdb==0.13.9
+matplotlib==3.5.2
+motmetrics==1.2.5
+numpy==1.22.3
+pafy==0.5.5
+pandas==1.4.2
+Pillow==9.1.1
+protobuf==3.20.1
+pycocotools==2.0.4
+pytest==7.1.2
+PyYAML==6.0
+requests==2.27.1
+scipy==1.8.0
+seaborn==0.11.2
+setuptools==59.5.0
+sphinx_rtd_theme==1.0.0
+thop==0.0.31.post2005241907
+torch==1.9.0+cu111
+torchreid.egg==info
+torchvision==0.10.0+cu111
+tqdm==4.64.0

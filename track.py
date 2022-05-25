@@ -148,9 +148,9 @@ def detect(opt):
             break
 
     cv2.destroyAllWindows()
-
     if opt.output != '':
         writer.release()
+        print("File {} is saved".format(opt.output))
 
 
 if __name__ == '__main__':

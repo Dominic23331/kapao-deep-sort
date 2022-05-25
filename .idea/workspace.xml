@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fc873a7-5ecc-44f3-9d06-d1875a36601a" name="Changes" comment="修改了无法追踪人的bug，暂时还不能输出">
+    <list default="true" id="1fc873a7-5ecc-44f3-9d06-d1875a36601a" name="Changes" comment="更新了无法追踪人的bug，并且可以保存视频">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deep_sort/deep_sort.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep_sort/deep_sort.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deep_sort/sort/tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep_sort/sort/tracker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/track.py" beforeDir="false" afterPath="$PROJECT_DIR$/track.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653397649549</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="更新了无法追踪人的bug，并且可以保存视频">
+      <created>1653468240575</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653468240575</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,6 +124,7 @@
     </ignored-roots>
     <MESSAGE value="可以使用了" />
     <MESSAGE value="修改了无法追踪人的bug，暂时还不能输出" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了无法追踪人的bug，暂时还不能输出" />
+    <MESSAGE value="更新了无法追踪人的bug，并且可以保存视频" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新了无法追踪人的bug，并且可以保存视频" />
   </component>
 </project>
